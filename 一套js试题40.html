@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//如果使用/g标志来定义的话，JavaScript中的正则表达式将会在匹配中携带一个状态，即使它们实际上是在不同的字符串（lastIndex属性）上使用的。这意味着a3将是null，因为正则表达式是从最后一个匹配的字符串的索引开始的，即使它是另一个字符串。
+		function captureOne(re, str) {
+		  var match = re.exec(str);
+		  return match && match[1];
+		}
+		var numRe  = /num=(\d+)/ig,
+		    wordRe = /word=(\w+)/i,
+		    a1 = captureOne(numRe,  "num=1"),
+		    a2 = captureOne(wordRe, "word=1"),
+		    a3 = captureOne(numRe,  "NUM=2"),
+		    a4 = captureOne(wordRe,  "WORD=2");
+		[a1 === a2, a3 === a4]
+	</script>
+</body>
+</html>

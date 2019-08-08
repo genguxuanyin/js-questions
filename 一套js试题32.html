@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		function f() {}
+		var parent = Object.getPrototypeOf(f);
+		f.name // ?'f'
+		parent.name // ?''
+		typeof eval(f.name) // ?'function'
+		typeof eval(parent.name) //  ?'undefined'
+	</script>
+</body>
+</html>

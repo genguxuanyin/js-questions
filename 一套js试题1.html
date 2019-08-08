@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//1
+/*		
+		//parseInt('0', 0);  //基数为0，或者undefined，用10进制
+		var arr = ["1","2","3"].map(parseInt);
+		console.log(arr);
+*/
+		//1-1
+		//第二个参数可选。对象作为该执行回调时使用，传递给函数，用作 "this" 的值。如果省略了 thisValue ，"this" 的值为window
+		/*
+		var obj = {name:'zx'};
+		[1,2,3].map(function(currentValue,index,arr){
+			console.log(this,this.name);
+			console.log(currentValue,index,arr);
+		},obj);
+
+		[1,2,3].map(function(currentValue,index,arr){
+			console.log(this,this.name);
+			console.log(currentValue,index,arr);
+		});
+		*/
+
+		//1-2
+		var arr = []; 
+		arr[0] = 1;
+		arr[100] = 100; 
+		arr.map(function (x, i) {
+			console.log(i);
+			return i;
+		});
+		console.log(arr);
+
+	</script>
+</body>
+</html>

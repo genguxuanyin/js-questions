@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//当Date被作为构造函数调用时，它返回一个相对于纪元的对象（1970年1月1日）。当参数丢失时，它会返回当前日期。当它作为一个函数被调用时，它会返回当前时间的字符串表示法。
+		var a = Date(0);
+		var b = new Date(0);
+		var c = new Date();
+		[a === b, b === c, a === c]
+	</script>
+</body>
+</html>

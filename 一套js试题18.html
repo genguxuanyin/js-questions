@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//改变变量改变了arguments，改变argumnets也改变了本地变量，即时他们不在一个作用域
+		function sidEffecting(ary) {
+		  ary[0] = ary[2];
+		}
+		function bar(a,b,c) {
+		  c = 10
+		  sidEffecting(arguments);
+		  return a + b + c;
+		}
+		bar(1,1,1)
+	</script>
+</body>
+</html>

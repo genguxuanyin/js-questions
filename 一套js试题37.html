@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		var a = Function.length,
+		    b = new Function().length;
+		a === b
+
+		function Person(num,name){
+			this.num = num;
+			this.name = name;
+		}
+		Person.prototype.showNum = function(){
+			console.log(this.num);
+		}
+		Person.prototype.showName = ()=>console.log(this.name);
+		var p1 = new Person('01','zx');
+		p1.showNum();
+		p1.showName();
+	</script>
+</body>
+</html>

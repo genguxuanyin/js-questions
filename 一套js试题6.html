@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//6
+		//JS里Math.pow(2, 53)是可以表示的最大值，最大值加1还是最大值，无限循环
+		
+		var END = Math.pow(2, 53);
+		var START = END - 100;
+		var count = 0;
+		for (var i = START; i <= END; i++) {
+		    count++;
+		}
+		console.log(count);
+
+	</script>
+</body>
+</html>

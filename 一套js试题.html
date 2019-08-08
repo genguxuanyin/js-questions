@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//1
+/*		
+		//parseInt('0', 0);  //基数为0，或者undefined，用10进制
+		var arr = ["1","2","3"].map(parseInt);
+		console.log(arr);
+*/
+		//1-1
+		//第二个参数可选。对象作为该执行回调时使用，传递给函数，用作 "this" 的值。如果省略了 thisValue ，"this" 的值为window
+		/*
+		var obj = {name:'zx'};
+		[1,2,3].map(function(currentValue,index,arr){
+			console.log(this,this.name);
+			console.log(currentValue,index,arr);
+		},obj);
+
+		[1,2,3].map(function(currentValue,index,arr){
+			console.log(this,this.name);
+			console.log(currentValue,index,arr);
+		});
+		*/
+
+		//1-2
+		var arr = []; 
+		arr[0] = 1;
+		arr[100] = 100; 
+		arr.map(function (x, i) {
+			console.log(i);
+			return i;
+		});
+		console.log(arr);
+		//2
+/*
+		var arr = [typeof null, null instanceof Object];
+		console.log(arr);
+*/
+		//3
+/*
+		var arr = [[3,2,1].reduce(Math.pow),[].reduce(Math.pow)];
+		console.log(arr);
+*/
+
+		//3-1
+		/*
+		//有初始值则初始值作为第一次pValue
+		var arr = [1,2,3].reduce(function(pValue,cValue,cIndex,arr){
+				console.log(pValue,cValue,cIndex,arr);
+				return pValue;
+			},0)
+		//没有初始值则第一个值作为pValue，第二个值作为cValue
+		var arr = [1,2,3].reduce(function(pValue,cValue,cIndex,arr){
+				console.log(pValue,cValue,cIndex,arr);
+				return pValue;
+			})
+		
+		//没有初始值，并且数组只有一位，则不执行fun，直接返回数组
+		var arr = [1].reduce(function(pValue,cValue,cIndex,arr){
+				console.log(pValue,cValue,cIndex,arr);
+				return pValue;
+			})
+		*/
+		//4
+
+		/*var val = 'smtg';
+		console.log('Value is ' + (val === 'smtg') ? 'Something' : 'Nothing');
+		*/
+
+		//5
+
+		/*var name = 'World!';
+		(function () {
+		    if (typeof name === 'undefined') {
+		        var name = 'Jack';
+		        console.log('Goodbye ' + name);
+		    } else {
+		        console.log('Hello ' + name);
+		    }
+		})();
+		*/
+
+		//6
+		//JS里Math.pow(2, 53)是可以表示的最大值，最大值加1还是最大值，无限循环
+		/*
+		var END = Math.pow(2, 53);
+		var START = END - 100;
+		var count = 0;
+		for (var i = START; i <= END; i++) {
+		    count++;
+		}
+		console.log(count);
+		*/
+
+		//7
+		var arr = [0,1,2];
+		arr[10] = 10;
+		arr.filter(function(currentValue,index,arr) {
+			console.log(currentValue);
+			return currentValue === undefined;
+		});
+	</script>
+</body>
+</html>

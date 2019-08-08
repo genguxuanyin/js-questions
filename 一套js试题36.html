@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//如果调用Date的构造函数传入一个字符串的话需要符合规范, 即满足 Date.parse 的条件
+		var a = new Date();
+		var b = new Date("epoch");
+		var c = new Date(2014-03-01-12-30);
+		var d = new Date(2015,4,15,17,55,55);		
+		var e = new Date("1234567");
+
+		//JS Date对象常用的带参数初始化方式：
+
+		//1、用整数初始化日期对象 
+		//说明： new Date( year, month, date, hrs, min, sec) 按给定的参数创建一日期对象
+
+		var date1 = new Date(2017,06,06); console.log(date1); // Thu Jul 06 2017 00:00:00 GMT+0800 (中国标准时间) 
+		var date1 = new Date(2017,1,1); console.log(date1); // Wed Feb 01 2017 00:00:00 GMT+0800 (中国标准时间) 
+		var date1 = new Date(2017,01-2,03); console.log(date1); // Thu Dec 01 2016 00:00:00 GMT+0800 (中国标准时间) 
+		var date1 =new Date(2017,06,06,06,06,06); console.log(date1); // Thu Jul 06 2017 06:06:06 GMT+0800 (中国标准时间) 
+		
+
+		//2、用字符串初始化日期对象 
+
+		var date2 = new Date('2017/06/06'); console.log(date2); // Tue Jun 06 2017 00:00:00 GMT+0800 (中国标准时间) 
+		var date2 = new Date('2017-08-08'); console.log(date2); // Tue Aug 08 2017 08:00:00 GMT+0800 (中国标准时间) 
+		var date2 = new Date('2017-9-9'); console.log(date2); // Sat Sep 09 2017 00:00:00 GMT+0800 (中国标准时间) 
+		//说明：如果字符串模式不支持短横杠模式，则进行字符串替换： 
+		var strTime='2011-04-16'; 
+		var date2= new Date(Date.parse(strTime.replace(/-/g, '/')));
+
+		//3、用毫秒时间戳初始化日期对象 
+		var timestamp=new Date().getTime(); console.log( new Date(timestamp) ); //Tue Jun 06 2017 11:06:59 GMT+0800 (中国标准时间) 
+		var date3 = new Date( timestamp - 1 * 60 * 60 * 1000); console.log(date3); // Tue Jun 06 2017 10:06:59 GMT+0800 (中国标准时间) 
+		//说明：时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总秒数。时间戳唯一地标识某一刻的时间。
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//3
+/*
+		var arr = [[3,2,1].reduce(Math.pow),[].reduce(Math.pow)];
+		console.log(arr);
+*/
+
+		//3-1
+		/*
+		//有初始值则初始值作为第一次pValue
+		var arr = [1,2,3].reduce(function(pValue,cValue,cIndex,arr){
+				console.log(pValue,cValue,cIndex,arr);
+				return pValue;
+			},0)
+		//没有初始值则第一个值作为pValue，第二个值作为cValue
+		var arr = [1,2,3].reduce(function(pValue,cValue,cIndex,arr){
+				console.log(pValue,cValue,cIndex,arr);
+				return pValue;
+			})
+		
+		//没有初始值，并且数组只有一位，则不执行fun，直接返回数组
+		var arr = [1].reduce(function(pValue,cValue,cIndex,arr){
+				console.log(pValue,cValue,cIndex,arr);
+				return pValue;
+			})
+		*/
+
+	</script>
+</body>
+</html>

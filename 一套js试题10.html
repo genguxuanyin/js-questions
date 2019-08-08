@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//主要在于 -9 % 2 == -1 保留正负号。 Infinity % 2 得到的是NaN，但是注意NaN与所有值都不相等包括本身
+		function isOdd(num) {
+		    return num % 2 == 1;
+		}
+		function isEven(num) {
+		    return num % 2 == 0;
+		}
+		function isSane(num) {
+		    return isEven(num) || isOdd(num);
+		}
+		var values = [7, 4, '13', -9, Infinity];
+		values.map(isSane);
+	</script>
+</body>
+</html>

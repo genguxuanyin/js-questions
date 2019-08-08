@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+
+		//7
+		/*
+		var arr = [0,1,2];
+		arr[10] = 10;
+		arr.filter(function(currentValue,index,arr) {
+			console.log(currentValue);
+			return currentValue === undefined;
+		});
+*/
+		var a = Array.apply(null, Array(3));
+		console.log(a); //[undefined, undefined, undefined]
+		a.map(function (x, i) {
+			return i;
+		}); //[0, 1, 2]
+
+		console.dir(Array);
+	</script>
+</body>
+</html>

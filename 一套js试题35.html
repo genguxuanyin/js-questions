@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//答案是：它取决于浏览器。class是一个保留的词，但它被Chrome、Firefox和Opera所接受为一个属性名。它将在IE中失败
+		var a = {class: "Animal", name: 'Fido'};
+		console.log(a.class);
+	</script>
+</body>
+</html>

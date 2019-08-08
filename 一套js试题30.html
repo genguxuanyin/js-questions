@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//name为只读属性
+		function foo() { }
+		var oldName = foo.name;
+		foo.name = "bar";
+		[oldName, foo.name]
+	</script>
+</body>
+</html>

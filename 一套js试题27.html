@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>http://javascript-puzzlers.herokuapp.com/</title>
+</head>
+<body>
+	<script>
+		//数组比较大小，隐式类型转换，先toString，然后按字符串比较规则比较
+		var a = [1, 2, 3],
+		    b = [1, 2, 3],
+		    c = [1, 2, 4]
+		console.log(a ==  b,a === b,a > c,a < c);
+	</script>
+</body>
+</html>
