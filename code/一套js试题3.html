@@ -25,7 +25,7 @@
 				return pValue;
 			})
 		
-		//没有初始值，并且数组只有一位，则不执行fun，直接返回数组
+		//没有初始值，并且数组只有一位，则不执行fun，直接返回数组第一个元素
 		var arr = [1].reduce(function(pValue,cValue,cIndex,arr){
 				console.log(pValue,cValue,cIndex,arr);
 				return pValue;
